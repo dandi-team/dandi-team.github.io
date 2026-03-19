@@ -43,12 +43,9 @@ and a European Union - University of Montreal Partnership award.
 .. list-table:: 
     :header-rows: 0
     :widths: 1 1
+    :align: center
 
     * - .. figure:: images/inr_logo_rouge.svg
-            :align: center
       - .. figure:: images/Universite_de_Montreal_logo.svg
-            :align: center
     * - .. figure:: images/ANR-logo-2021-complet.svg
-            :align: center
       - .. figure:: images/NSERC_RGB.svg
-            :align: center
