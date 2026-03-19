@@ -19,8 +19,8 @@ DANDI team
     When this assumption is not met, statistical inferences can be poor or misleading.
 
     In DANDI, we aim to address this gap by developing novel transfer procedures, 
-    building either on Optimal Transport theory or leveraging domain-specific data structure,
-    e.g. graph convolutional networks.
+    building either on Optimal Transport theory or leveraging domain-specific data structure via
+    e.g., graph convolutional networks.
     We develop these methods using functional magnetic resonance imaging (fMRI) datasets;
     in particular, leveraging the deep-phenotyping dataset Courtois-NeuroMod, collected at
     the University of Montreal.
