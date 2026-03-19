@@ -9,25 +9,27 @@ DANDI team
 .. container:: index-paragraph
 
     The DANDI (*Domain Adaptation for Neural Data Integration*) team is a 
-    joint initiative between `Prof. Bertrand Thirion`_ (INRIA) and 
-    `Prof. Lune Bellec`_ (University of Montreal). 
+    joint initiative between Prof. `Bertrand Thirion`_ (INRIA) and 
+    Prof. `Lune Bellec`_ (University of Montreal). 
     
     Sparse, noisy data significantly limits the potential of artificial intelligence 
-    (AI) in health applications. One promising approach is to leverage related 
-    data-rich systems through transfer learning; however, this assumes that the data
-    we train and test on share the same features and come from the same population. 
-    When this assumption is not met, statistical inferences can be poor or misleading.
+    (AI) in health applications. 
+    One promising approach is to leverage related data-rich systems through transfer learning; 
+    for example, by pre-training models that can be fine-tuned for clinical settings. 
+    Importantly, however, this approach can degrade performance if target applications have limited data.
 
     In DANDI, we aim to address this gap by developing novel transfer procedures, 
     building either on Optimal Transport theory or leveraging domain-specific data structure via
     e.g., graph convolutional networks.
     We develop these methods using functional magnetic resonance imaging (fMRI) datasets;
-    in particular, leveraging the deep-phenotyping dataset Courtois-NeuroMod, collected at
+    in particular, leveraging the deep-phenotyping dataset `Courtois-NeuroMod`_, collected at
     the University of Montreal.
 
-.. _Prof. Bertrand Thirion: https://pages.saclay.inria.fr/bertrand.thirion/
+.. _Bertrand Thirion: https://pages.saclay.inria.fr/bertrand.thirion/
 
-.. _Prof. Lune Bellec: https://psy.umontreal.ca/repertoire-departement/professeures/professeures/in/in19348/sg/Lune%20Bellec/
+.. _Lune Bellec: https://psy.umontreal.ca/repertoire-departement/professeures/professeures/in/in19348/sg/Lune%20Bellec/
+
+.. _Courtois-NeuroMod: https://www.cneuromod.ca/
 
 
 Funding
