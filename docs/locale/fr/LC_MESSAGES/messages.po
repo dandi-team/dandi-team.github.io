@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, DANDI team
+# This file is distributed under the same license as the dandi-team package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dandi-team \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 16:15-0400\n"
+"PO-Revision-Date: 2026-03-19 16:58-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../index.rst:7
+msgid "DANDI team"
+msgstr "L'équipe DANDI"
+
+#: ../../index.rst:11
+msgid ""
+"The DANDI (*Domain Adaptation for Neural Data Integration*) team is a "
+"joint initiative between Prof. `Bertrand Thirion`_ (INRIA) and Prof. "
+"`Lune Bellec`_ (University of Montreal)."
+msgstr ""
+"L'équipe DANDI (Adaptation de domaine pour l'intégration de "
+"données neuronales) est une initiative conjointe entre Pr "
+"`Bertrand Thirion`_ (INRIA) and Pre `Lune Bellec`_ (Université de Montréal)."
+
+#: ../../index.rst:15
+msgid ""
+"Sparse, noisy data significantly limits the potential of artificial "
+"intelligence (AI) in health applications. One promising approach is to "
+"leverage related data-rich systems through transfer learning; for "
+"example, by pre-training models that can be fine-tuned for clinical "
+"settings. Importantly, however, this approach can degrade performance if "
+"target applications have limited data."
+msgstr ""
+"Une approche prometteuse consiste à tirer parti de systèmes connexes riches en "
+"données par le biais de l'apprentissage par transfert ; par exemple, en pré-entraînant "
+"des modèles qui peuvent être affinés pour des contextes cliniques. "
+"Cette approche peut toutefois dégrader les performances si les domaines cibles "
+"disposent de données limitées."
+
+#: ../../index.rst:21
+msgid ""
+"In DANDI, we aim to address this gap by developing novel transfer "
+"procedures, building either on Optimal Transport theory or leveraging "
+"domain-specific data structure via e.g., graph convolutional networks. We"
+" develop these methods using functional magnetic resonance imaging (fMRI)"
+" datasets; in particular, leveraging the deep-phenotyping dataset "
+"`Courtois-NeuroMod`_, collected at the University of Montreal."
+msgstr ""
+"Dans DANDI, nous devélopperons de nouvelles procédures de transfert, "
+"soit issues de la théorie OT, soit tirant parti de la structure des données, "
+"par exemple les réseaux convolutionnels graphiques. "
+"Nous mettons au point ces méthodes en utilisant de données d’imagerie par "
+"résonance magnétique fonctionnelle (IRMf) ; en particulier, "
+"nous exploitons le 'deep phenotyping' jeu de données `Courtois-NeuroMod`_, "
+"recueilli à l’Université de Montréal."
+
+#: ../../index.rst:36
+msgid "Funding"
+msgstr "Financement"
+
+#: ../../index.rst:38
+msgid ""
+"This work is generously supported as an Équipe Associée award from INRIA,"
+" an international collaborative research project (PRCI) award from ANR "
+"and NSERC, and a European Union - University of Montreal Partnership "
+"award."
+msgstr ""
+"Ce travail bénéficie d’un soutien généreux dans le cadre d’un financement "
+"Équipe Associée de l’INRIA, d’un projet de recherche collaborative "
+"internationale (PRCI) attribué par l’ANR et le CRSNG, ainsi que d’une "
+"bourse de partenariat Union européenne - Université de Montréal."
+
