@@ -7,21 +7,30 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
     - uses: actions/checkout@v5
       with:
         persist-credentials: false
-    - name: Build en HTML
+
+    - name: Build English HTML
       uses: ammaraskar/sphinx-action@7.0.0
-    - name: Build fr HTML
-      uses: ammaraskar/sphinx-action@7.0.0
+
+    - name: Set up FR env
+      uses: actions/setup-python@v3
       with:
-        build-command: "make -e SPHINXOPTS=\"-D language='fr'\" html"
+        python-version: '3.11'
+    - name: Install Sphinx & Dependencies for FR
+      run: pip install -r docs/requirements.txt
+    - name: Build FR Documentation
+      run: cd "$GITHUB_WORKSPACE/docs" && make -e SPHINXOPTS="-D language='fr'" html
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v5
       with:
         name: html-docs
         path: docs/_build/html/
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       if: github.ref == 'refs/heads/main'
