@@ -11,8 +11,12 @@ jobs:
     - uses: actions/checkout@v5
       with:
         persist-credentials: false
-    - name: Build HTML
+    - name: Build en HTML
       uses: ammaraskar/sphinx-action@7.0.0
+    - name: Build fr HTML
+      uses: ammaraskar/sphinx-action@7.0.0
+      with:
+        build-command: "make -e SPHINXOPTS=\"-D language='fr'\" html"
     - name: Upload artifacts
       uses: actions/upload-artifact@v5
       with:
