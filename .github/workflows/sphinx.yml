@@ -13,17 +13,19 @@ jobs:
       with:
         persist-credentials: false
 
-    - name: Build English HTML
-      uses: ammaraskar/sphinx-action@7.0.0
-
-    - name: Set up FR env
-      uses: actions/setup-python@v3
+    - name: Set up env
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    - name: Install Sphinx & Dependencies for FR
+  
+    - name: Install Sphinx & Dependencies
       run: pip install -r docs/requirements.txt
+
     - name: Build FR Documentation
-      run: cd "$GITHUB_WORKSPACE/docs" && make -e SPHINXOPTS="-D language='fr'" html
+      run: cd "$GITHUB_WORKSPACE/docs" && sphinx-build -v -b html . _build/html/fr -D language='fr'
+
+    - name: Build EN Documentation
+      run: cd "$GITHUB_WORKSPACE/docs" && sphinx-build -v -b html . _build/html/en -D language='en'
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v5
@@ -36,4 +38,4 @@ jobs:
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/html
+        publish_dir: docs/_build/html/fr

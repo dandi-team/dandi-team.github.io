@@ -26,9 +26,9 @@ _ = get_translation(catalog)
 
 
 def setup(app):
-    locale_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), "locale")
+    locale_dirs = os.path.join(os.path.abspath(os.path.dirname(__file__)), "locales")
 
-    app.add_message_catalog(catalog, locale_dir)
+    app.add_message_catalog(catalog, locale_dirs)
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -44,3 +44,4 @@ html_theme_options = {
         "path/to/page": [],
     },
 }
+html_context = {"languages": [["en", "./_build/html/en"], ["fr", "./_build/html/fr"]]}
