@@ -16,32 +16,42 @@ author = "Elizabeth DuPre, Lune Bellec, Bertrand Thirion"
 extensions = []
 
 templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", ".nox"]
 
-import os.path
-from sphinx.locale import get_translation
+import os
+import sys
 
-catalog = "messages"
-_ = get_translation(catalog)
+sys.path.insert(0, os.path.abspath("."))
 
+# env vars
+language_env = os.environ.get("SPHINX_LANG", "en")
 
-def setup(app):
-    locale_dirs = os.path.join(os.path.abspath(os.path.dirname(__file__)), "locales")
-
-    app.add_message_catalog(catalog, locale_dirs)
+# Language of the current build
+# language can later be overridden (eg with the -D flag)
+# but we need it set here so it can make it into the html_context
+language = language_env
+languages = ["en", "fr"]
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_baseurl = "https://dandi-team.github.io"
 html_theme = "pydata_sphinx_theme"
+html_static_path = ["_static"]
+html_js_files = ["language-select.js"]
 
 html_sidebars = {
     "path/to/page": [],
 }
 html_theme_options = {
+    "navbar_persistent": ["language-selector", "search-button"],
     "secondary_sidebar_items": {
         "path/to/page": [],
     },
 }
-html_context = {"languages": [["en", "./_build/html/en"], ["fr", "./_build/html/fr"]]}
+html_context = {
+    "language": language,
+    "languages": languages,
+    "baseurl": html_baseurl,
+}

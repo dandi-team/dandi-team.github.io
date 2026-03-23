@@ -21,11 +21,8 @@ jobs:
     - name: Install Sphinx & Dependencies
       run: pip install -r docs/requirements.txt
 
-    - name: Build FR Documentation
-      run: cd "$GITHUB_WORKSPACE/docs" && sphinx-build -v -b html . _build/html/fr -D language='fr'
-
-    - name: Build EN Documentation
-      run: cd "$GITHUB_WORKSPACE/docs" && sphinx-build -v -b html . _build/html/en -D language='en'
+    - name: Build Documentation
+      run: nox -s docs
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v5
@@ -38,4 +35,4 @@ jobs:
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/html/fr
+        publish_dir: docs/_build/html

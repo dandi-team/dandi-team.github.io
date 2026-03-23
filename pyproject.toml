@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dandi-team"
+dynamic = ["version"]
+dependencies = ["nox", "pydata-sphinx-theme", "sphinx"]
+
+[tool.hatch.build.targets.wheel]
+bypass-selection = true
+
+[tool.hatch]
+version.source = "vcs"
