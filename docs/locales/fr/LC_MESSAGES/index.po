@@ -62,7 +62,7 @@ msgstr ""
 "Nous mettons au point ces méthodes en utilisant de données d’imagerie par "
 "résonance magnétique fonctionnelle (IRMf) ; en particulier, "
 "nous exploitons le 'deep phenotyping' jeu de données `Courtois-NeuroMod`_, "
-"recueilli à l’Université de Montréal."
+"recueilli à CCSMTL, affilié à l’Université de Montréal."
 
 #: ../../index.rst:36
 msgid "Funding"
